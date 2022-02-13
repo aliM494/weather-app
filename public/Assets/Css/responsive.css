@@ -1,0 +1,56 @@
+@media screen and (max-width: 768px) {
+  .main-box {
+    position: absolute;
+    top: 5%;
+    right: 2.5%;
+    width: 95%;
+    height: 90%;
+    overflow: hidden;
+  }
+
+  .search {
+    width: 260px;
+    right: calc(50%-260px);
+  }
+
+  .details {
+    flex-direction: column;
+    background: url("../images/MobileMorning.png");
+    background-size: cover;
+    border-radius: 50px 50px 10px 10px;
+    height: 35rem;
+    top: 30%;
+  }
+
+  .details.night {
+    background: url("../images/MobileNight.png");
+    background-size: cover;
+  }
+
+  .cloud {
+    display: none;
+  }
+
+  .city {
+    right: 40%;
+  }
+  .detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+    font-size: 1.2em;
+    right: 5%;
+  }
+
+  .detail .time {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .search {
+    width: 220px;
+    right: calc(50%-220px);
+  }
+}
