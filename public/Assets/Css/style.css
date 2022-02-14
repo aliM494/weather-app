@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap");
+
 @font-face {
   font-family: IranSans;
   src: url("../Fonts/Sepahbod.otf");
@@ -7,7 +9,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "IranSans";
+  font-family: "IranSans", "poppins";
 }
 
 body {
@@ -101,34 +103,47 @@ body {
   padding: 10px 0;
 }
 
-.clear {
+/* Errors Section */
+.error {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 15px;
-  height: 15px;
-  left: 15px;
-  cursor: pointer;
+  width: 360px;
+  height: 5rem;
+  top: 45%;
+  right: calc(50% - 180px);
   display: flex;
   justify-content: center;
   align-items: center;
+  background: rgba(247, 64, 64, 0.2);
+  border-radius: 16px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(247, 64, 64, 0.3);
 }
 
-.clear::before {
-  content: "";
-  position: absolute;
-  width: 1px;
-  height: 100%;
-  background: #999;
-  transform: rotate(45deg);
+.error .text {
+  font-size: 1.2em;
+  color: rgb(110, 5, 5);
 }
-.clear::after {
-  content: "";
+
+.alert {
   position: absolute;
-  width: 1px;
-  height: 100%;
-  background: #999;
-  transform: rotate(-45deg);
+  width: 360px;
+  height: 5rem;
+  top: 45%;
+  right: calc(50% - 180px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(21, 182, 0, 0.2);
+  border-radius: 16px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(0, 168, 36, 0.3);
+}
+
+.alert .text {
+  font-size: 1.2em;
+  color: rgb(12, 85, 3);
 }
 
 /* ***** Details Section ***** */
@@ -183,17 +198,9 @@ body {
 
 .weather .sky {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   font-size: 1em;
-}
-
-.weather .sky span {
-  position: relative;
-  font-size: 2.5em;
-  color: #fff;
-  top: 3px;
-  left: 5px;
 }
 
 .weather .sky h2 {
