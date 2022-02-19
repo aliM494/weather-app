@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { sendWeatherRequest } from "../redux/weather/weatherAction";
 import Details from "./Details";
+import Loading from "./Loading";
 
 const Main = () => {
   const { loading, data, error } = useSelector((state) => state);
@@ -29,7 +30,9 @@ const Main = () => {
           </div>
         </div>
         {loading ? (
-          <h2>Loading...</h2>
+          <div className="alert">
+            <Loading />
+          </div>
         ) : data.main ? (
           <Details data={data} />
         ) : error ? (

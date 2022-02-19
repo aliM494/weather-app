@@ -46,8 +46,8 @@ const PersianDate = (props) => {
   return (
     <>
       <div className="time">
-        <h2 className="date">{date}</h2>
-        <h2 className="time">ساعت {time}</h2>
+        <h3 className="date">{date}</h3>
+        <h3 className="cloak">ساعت {time}</h3>
       </div>
     </>
   );
