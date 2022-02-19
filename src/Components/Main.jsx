@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
-import getWeatherInfo from "../redux/weather/weatherAction";
+import { useDispatch, useSelector } from "react-redux";
+import { sendWeatherRequest } from "../redux/weather/weatherAction";
 import Details from "./Details";
 
 const Main = () => {
@@ -10,7 +9,7 @@ const Main = () => {
   const [query, setQuery] = useState("");
 
   const handleGetWeatherInfo = () => {
-    dispatch(getWeatherInfo(query));
+    dispatch(sendWeatherRequest(query));
     setQuery("");
   };
 

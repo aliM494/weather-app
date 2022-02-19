@@ -4,27 +4,26 @@ import {
   SEND_WEATHER_REQUEST,
 } from "./weatherTypes";
 
-const { default: axios } = require("axios");
-
-const sendWeatherRequest = () => {
+export const sendWeatherRequest = (query) => {
   return {
     type: SEND_WEATHER_REQUEST,
+    payload: query,
   };
 };
-const receiveWeatherResponse = (data) => {
+export const receiveWeatherResponse = (data) => {
   return {
     type: RECEIVE_WEATHER_RESPONSE,
     payload: data,
   };
 };
-const receiveWeatherError = (data) => {
+export const receiveWeatherError = (data) => {
   return {
     type: RECEIVE_WEATHER_ERROR,
     payload: data,
   };
 };
 
-const getWeatherInfo = (query) => {
+/*const getWeatherInfo = (query) => {
   return (dispatch) => {
     dispatch(sendWeatherRequest);
     axios
@@ -40,4 +39,4 @@ const getWeatherInfo = (query) => {
   };
 };
 
-export default getWeatherInfo;
+export default getWeatherInfo;*/
