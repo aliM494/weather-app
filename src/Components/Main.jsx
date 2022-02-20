@@ -11,7 +11,6 @@ const Main = () => {
 
   const handleGetWeatherInfo = () => {
     dispatch(sendWeatherRequest(query));
-    setQuery("");
   };
 
   return (

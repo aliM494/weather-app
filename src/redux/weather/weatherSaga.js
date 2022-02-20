@@ -1,5 +1,5 @@
 import axios from "axios";
-import { takeEvery, call, put } from "redux-saga/effects";
+import { call, put, takeLatest } from "redux-saga/effects";
 import { receiveWeatherError, receiveWeatherResponse } from "./weatherAction";
 import { SEND_WEATHER_REQUEST } from "./weatherTypes";
 
@@ -19,5 +19,5 @@ function* handleGetWeather(action) {
 }
 
 export function* watcherSaga() {
-  yield takeEvery(SEND_WEATHER_REQUEST, handleGetWeather);
+  yield takeLatest(SEND_WEATHER_REQUEST, handleGetWeather);
 }
